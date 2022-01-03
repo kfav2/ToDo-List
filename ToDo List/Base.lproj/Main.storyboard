@@ -44,6 +44,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vS4-ci-qqL">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="Pf2-Eh-ByY">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="BYZ-38-t0r" id="fPT-kR-K2A"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0zx-BE-HPa">
                             <connections>
                                 <segue destination="GfF-Vv-WfJ" kind="presentation" identifier="AddDetail" id="8gl-cA-kQn"/>
@@ -51,6 +56,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBarButton" destination="0zx-BE-HPa" id="Hzg-DJ-A7n"/>
                         <outlet property="tableView" destination="pih-a6-hBR" id="PXZ-MO-cb7"/>
                     </connections>
                 </viewController>
