@@ -154,7 +154,16 @@ class ToDoListViewController: UIViewController {
 
 }
 
-extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource {
+extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource, ListTableViewCellDelegate {
+    func checkBoxToggled(sender: ListTableViewCell) {
+        // figure out which row was pressed
+        if let selectedIndexPath = tableView.indexPath(for: sender) {
+            toDoItems[selectedIndexPath.row].completed = !toDoItems[selectedIndexPath.row].completed
+            tableView.reloadRows(at: [selectedIndexPath], with: .automatic)
+            saveData()
+        } 
+    }
+    
     // how many cells are in UITable, returns Int
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         toDoItems.count
@@ -162,8 +171,10 @@ extension ToDoListViewController: UITableViewDelegate, UITableViewDataSource {
     
     // formatting cells so that they are "re-used", iOS only uses a defined amount of cells on a page. e.g. if table has 1000 elements, when you scroll the cells move and are reused
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = toDoItems[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ListTableViewCell
+        cell.delegate = self
+        cell.nameLabel.text = toDoItems[indexPath.row].name
+        cell.checkBoxButton.isSelected = toDoItems[indexPath.row].completed
         return cell
     }
     
