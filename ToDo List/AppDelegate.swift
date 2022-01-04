@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,7 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // gets current user notification center on device and delegates it to self
+        // give NC the right to send messages that are intercepted and received on our app, so we can respond to them
+        UNUserNotificationCenter.current().delegate = self
+        
         return true
     }
 
@@ -34,3 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    // if you don't do this and you get a notification while in app, the notification won't show up
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let id = notification.request.identifier
+        print("Recieved in-app notification with ID: \(id)")
+        // once you've received notification while in app it won't linger around and clutter notification queue
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        completionHandler([.banner, .list, .sound])
+    }
+}
