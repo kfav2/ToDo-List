@@ -17,6 +17,7 @@
 		9080DC3E278150C700A5B93B /* ToDoDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9080DC3D278150C700A5B93B /* ToDoDetailTableViewController.swift */; };
 		9092D2A52784A0E000400A8B /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092D2A42784A0E000400A8B /* ListTableViewCell.swift */; };
 		9092D2A92784D8B900400A8B /* ToDoItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092D2A82784D8B800400A8B /* ToDoItems.swift */; };
+		9092D2AB2784E08A00400A8B /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092D2AA2784E08A00400A8B /* LocalNotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9080DC3D278150C700A5B93B /* ToDoDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoDetailTableViewController.swift; sourceTree = "<group>"; };
 		9092D2A42784A0E000400A8B /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		9092D2A82784D8B800400A8B /* ToDoItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItems.swift; sourceTree = "<group>"; };
+		9092D2AA2784E08A00400A8B /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				9080DC0927812ED300A5B93B /* AppDelegate.swift */,
 				9080DC0B27812ED300A5B93B /* SceneDelegate.swift */,
+				9092D2AA2784E08A00400A8B /* LocalNotificationManager.swift */,
 				90024F052782A38F00F072FC /* ToDoItem.swift */,
 				9092D2A82784D8B800400A8B /* ToDoItems.swift */,
 				9080DC0D27812ED300A5B93B /* ToDoListViewController.swift */,
@@ -156,6 +159,7 @@
 				90024F062782A38F00F072FC /* ToDoItem.swift in Sources */,
 				9080DC3E278150C700A5B93B /* ToDoDetailTableViewController.swift in Sources */,
 				9080DC0C27812ED300A5B93B /* SceneDelegate.swift in Sources */,
+				9092D2AB2784E08A00400A8B /* LocalNotificationManager.swift in Sources */,
 				9092D2A52784A0E000400A8B /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
