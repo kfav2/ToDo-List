@@ -135,14 +135,29 @@
                                                         <action selector="reminderSwitchChanged:" destination="Syr-ce-YQA" eventType="valueChanged" id="4e2-PY-dof"/>
                                                     </connections>
                                                 </switch>
+                                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3wH-fb-M1m">
+                                                    <rect key="frame" x="122" y="0.0" width="182" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="182" id="bJ0-ZU-XbH"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="Syr-ce-YQA" eventType="valueChanged" id="EM9-fA-mIG"/>
+                                                    </connections>
+                                                </datePicker>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12/12/12, 12:12:12 PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBB-nn-IM0">
-                                                    <rect key="frame" x="114" y="11" width="186" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="114" y="0.0" width="186" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="3wH-fb-M1m" secondAttribute="trailing" constant="16" id="BEe-vn-3JX"/>
+                                                <constraint firstAttribute="bottom" secondItem="3wH-fb-M1m" secondAttribute="bottom" id="Yo2-L8-yia"/>
+                                                <constraint firstItem="3wH-fb-M1m" firstAttribute="top" secondItem="kxB-J1-1X1" secondAttribute="top" id="wvs-gC-eir"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="auS-gT-nip">
@@ -206,6 +221,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="compactDatePicker" destination="3wH-fb-M1m" id="at9-Jn-2Ua"/>
                         <outlet property="dateLabel" destination="gBB-nn-IM0" id="Bwg-Mz-Byh"/>
                         <outlet property="datePicker" destination="wvo-52-VbQ" id="HeR-b7-WGp"/>
                         <outlet property="nameField" destination="ixw-88-Up1" id="Z0v-mO-XDl"/>
@@ -217,7 +233,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gh6-qM-hao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="qGz-YJ-9Vd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2747.826086956522" y="69.642857142857139"/>
+            <point key="canvasLocation" x="2746.875" y="68.661971830985919"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HyO-o1-FQb">
