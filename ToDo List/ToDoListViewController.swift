@@ -24,7 +24,7 @@ class ToDoListViewController: UIViewController {
         toDoItems.loadData {
             self.tableView.reloadData()
         }
-        LocalNotificationsManager.authorizeLocalNotifications()
+        LocalNotificationsManager.authorizeLocalNotifications(viewController: self)
     }
         
     // reusable code to access file directory
