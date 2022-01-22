@@ -43,6 +43,10 @@ class ToDoListViewController: UIViewController {
             }
         }
     }
+    @IBAction func newDayButtonPressed(_ sender: UIBarButtonItem) {
+        toDoItems.itemsArray = []
+        self.tableView.reloadData()
+    }
     
     @IBAction func unwindFromDetail(segue: UIStoryboardSegue ) {
         let source = segue.source as! ToDoDetailTableViewController
@@ -68,6 +72,8 @@ class ToDoListViewController: UIViewController {
             addBarButton.isEnabled = false
         }
     }
+    
+    
     
 
 }

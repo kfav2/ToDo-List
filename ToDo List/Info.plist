@@ -20,6 +20,10 @@
 				</dict>
 			</array>
 		</dict>
+		<key>Fonts provided by application</key>
+		<array>
+			<string>keeptf__.ttf</string>
+		</array>
 	</dict>
 </dict>
 </plist>
